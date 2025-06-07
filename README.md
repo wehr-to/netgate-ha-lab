@@ -1,52 +1,65 @@
-Netgate 6100 HA Firewall Lab — Enterprise-Style Networking in a Self-Contained Lab
-Emulates a high-availability enterprise firewall and network stack using Netgate 6100 hardware, pfSense, VLANs, IDS, and automated infrastructure — built entirely offline and isolated from production networks.
+## 🛡️ netgate-ha-firewall-lab
+Enterprise-Grade Networking in a Self-Contained, Isolated Lab
+A fully offline, high-availability (HA) firewall and enterprise-style network stack using Netgate 6100 hardware, pfSense, Suricata IDS, VLAN segmentation, and automated infrastructure with Ansible — all isolated from production environments.
 
-# 🔧 Lab Features
-- Active/Passive pfSense HA firewall with CARP failover
-- Real-time Suricata IDS with Slack alerting
-- Network-wide ad blocking via pfBlockerNG
-- Segmented IoT VLAN for Arlo Cameras
-- Local SIEM with log correlation
-- Automated updates via Ansible for:
-pfSense
-Ubuntu
-Docker services
+## 🔧 Lab Features
+- Active/Passive pfSense HA cluster with seamless failover (CARP-based)
+- Suricata IDS with Slack webhook alerting
+- pfBlockerNG for DNS-based ad/tracker blocking
+- IoT VLAN with strict segmentation (e.g., Arlo Cameras)
+- Local SIEM deployment (Wazuh or Graylog) for log ingestion and correlation
+- Ansible automation for pfSense, Ubuntu, and Docker services
+- Offline-first: Fully operational without ISP/modem
+- Ubuntu-hosted infrastructure with Docker bridging
 
-- Self-contained environment (no ISP/modem needed)
-- Hosted on Ubuntu Linux with Docker bridge services
+## 🧰 Services & Tooling
+| Tool/Service        | Purpose                                            |
+| ------------------- | -------------------------------------------------- |
+| **pfSense**         | Enterprise-grade firewall, HA failover via CARP    |
+| **Suricata**        | Intrusion detection and alerting                   |
+| **pfBlockerNG**     | DNS-level ad/tracker blocking                      |
+| **Docker**          | Hosting internal bridge services and test apps     |
+| **Ansible**         | Infrastructure as Code (IaC) for config management |
+| **Ubuntu Server**   | Host OS for all networking and containers          |
+| **Slack Webhooks**  | Alerting system for IDS and HA status              |
+| **Wazuh / Graylog** | Log aggregation, SIEM correlation                  |
 
-# Services and Tools Used
-Service	Purpose
-pfSense (Netgate 6100 + VM)	Core firewall + failover
-Suricata	Intrusion detection and network monitoring
-pfBlockerNG	DNS-based ad/tracker blocking
-Docker	Hosting bridge services and internal apps
-Ansible	Infrastructure automation and config management
-Ubuntu Server	Host OS for lab environment
-Slack Webhooks	Alerting for IDS and system status
-SIEM (e.g., Wazuh/Graylog)	Log collection and correlation
+## 🔐 Security and Segmentation
+- IoT VLAN restricted with egress/ingress ACLs (east-west & north-south)
+- Air-gapped from the internet by design
+- DNS resolver restricted to trusted internal traffic
+- IDS alerts triggered on unauthorized lateral movement or traffic anomalies
 
-# Security and Segmentation
-IoT VLAN with strict east-west and north-south traffic rules
-No external internet access by design (lab isolation)
-IDS alerts for any anomalous behavior
-DNS resolver configured for local trust
+## 🎯 Learning Objectives
+- Deploy and understand enterprise firewall HA design
+- Gain hands-on experience with VLAN segmentation and routing
+- Develop Ansible playbooks for real network automation tasks
+- Strengthen my skills in Linux systems and Docker networking
+- Emulate secure, modern enterprise network posture in a risk-free lab
 
-# Goals and Learning Objectives
-Practice enterprise firewall design without production risk
-Understand failover, redundancy, and state synchronization
-Build hands-on VLAN and routing experience
-Develop Ansible playbooks for network ops automation
-Strengthen Linux and containerization knowledge
+## 🚀 Planned Enhancements
+- NAS Integration for VM backups and shared lab storage
+- VPN Gateway to simulate remote access and SASE environments
+- NetFlow/sFlow Collector for traffic analytics
+- Zero Trust ACLs across VLANs and enforcement zones
+- Multi-WAN Failover Testing
+- Replace Slack with self-hosted alerting (e.g., Mattermost, ntfy)
+- Build CI/CD GitOps-style automation for firewall config and Ansible push
+- Tune Suricata rules to match specific lab threats
 
-📚 Future Enhancements
-🗂️ Integrate NAS for internal backups, network file sharing, and VM/container storage
-📊 Add NetFlow or sFlow collector for traffic analytics
-🔐 Build out VPN gateway and secure remote access
-🧱 Expand Zero Trust enforcement between VLANs
-🪪 Replace Slack with self-hosted notification system (e.g., Mattermost, Ntfy)
-🎯 Tune Suricata rulesets for lab-specific threat detection
-📦 Add a GitOps-style CI/CD pipeline to auto-push changes to pfSense and Ansible
-🧪 Simulate multi-WAN for failover and load balancing testing
+## 🧠 Ideal For
+- Aspiring Network Security Engineers
+- Those prepping for CySA+, CASP, or enterprise firewall certs
+- Home labbers who want production-grade design
+- Security-focused DevOps / Infra Engineers
+
+
+
+
+
+
+
+
+
 
 
