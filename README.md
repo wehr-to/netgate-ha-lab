@@ -1,6 +1,6 @@
 ## 🛡️ netgate-ha-firewall-lab
 Enterprise-Grade Networking in a Self-Contained, Isolated Lab
-A fully offline, high-availability (HA) firewall and enterprise-style network stack using Netgate 6100 hardware, pfSense, Suricata IDS, VLAN segmentation, and automated infrastructure with Ansible — all isolated from production environments.
+A fully offline, high-availability (HA) firewall and enterprise-style network stack using Netgate 6100 hardware, pfSense, Suricata IDS, VLAN segmentation, and automated infrastructure with Ansible, all isolated from production environments.
 
 ## 🔧 Lab Features
 - Active/Passive pfSense HA cluster with seamless failover (CARP-based)
