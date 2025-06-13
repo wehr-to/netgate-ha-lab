@@ -1,4 +1,4 @@
-# Homelab Infra & Secure Ops — Ryzen 7 Node
+# Homelab Infra & Secure Ops / Ryzen 7 Node
 
 This repository documents the infrastructure, containerization, and security hardening of my Ryzen 7-powered homelab node. It serves as the primary compute and observability engine in a segmented, zero-trust lab environment. Every component is designed with least privilege, visibility, and automation in mind.
 
